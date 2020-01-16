@@ -1,0 +1,187 @@
+<ion-header>
+  <ion-toolbar color="blue">
+    <ion-buttons slot="start">
+      <ion-button size="small" shape="round" (click)="closeModal()" color="orange">
+        <ion-icon class="test" slot="start" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      HELP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="blue">
+  <div class="ion-padding">
+    <!-- Icon start -->
+    <ion-segment color="orange" scrollable [(ngModel)]="category">
+      <ion-segment-button checked layout="icon-start" value="adding">
+        <ion-label color="light">Add Transaction</ion-label>
+        <ion-icon name="add-circle-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button layout="icon-start" value="modify">
+        <ion-label color="light">Modify</ion-label>
+        <ion-icon name="create"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+
+  <div class="ion-padding">
+    <div [ngSwitch]="category">
+      <div *ngSwitchCase="'adding'">
+        <form>
+          <ion-item>
+            <ion-label position="floating" color="light">Place of Purchase</ion-label>
+            <ion-input type="text" ></ion-input>
+          </ion-item>
+          <div class="validation-errors">
+            <ng-container >
+              <div class="error-message" >
+                <ion-icon name="information-circle-outline"></ion-icon>
+              </div>
+            </ng-container>
+          </div>
+        <ion-item>
+          <ion-label color="light">MMM.DD.YYYY</ion-label>
+          <ion-datetime min="2010-01" max="2030"
+            [dayShortNames]="customDayShortNames"
+            displayFormat="DDD. MMM DD, YYYY"
+            monthShortNames="jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des"></ion-datetime>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container >
+            <div class="error-message" >
+              <ion-icon name="information-circle-outline"></ion-icon>
+            </div>
+          </ng-container>
+        </div>
+        <ion-item>
+          <ion-label position="floating" color="light">Product</ion-label>
+          <ion-input type="text" ></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container >
+            <div class="error-message">
+              <ion-icon name="information-circle-outline"></ion-icon> 
+            </div>
+          </ng-container>
+        </div>
+        <ion-item>
+          <ion-label position="floating" color="light">Account Number</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container >
+            <div class="error-message" >
+              <ion-icon name="information-circle-outline"></ion-icon>
+            </div>
+          </ng-container>
+        </div>
+        <ion-item>
+          <ion-label position="floating" color="light">Additional Comments</ion-label>
+          <ion-input type="text" ></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container>
+            <div class="error-message">
+              <ion-icon name="information-circle-outline"></ion-icon>
+            </div>
+          </ng-container>
+        </div>
+
+        <!-- These validations are for the form group -->
+        <div class="validation-errors">
+          <ng-container >
+            <div class="error-message" >
+              <ion-icon name="information-circle-outline"></ion-icon>
+            </div>
+          </ng-container>
+        </div>
+      
+          <ion-button shape="round" color="orange" expand="full" type="submit" >Submit</ion-button>
+        </form>
+      </div> 
+
+
+      <div *ngSwitchCase="'modify'">
+        <form>
+          <ion-item>
+            <ion-label position="floating" color="light">Place of Purchase</ion-label>
+            <ion-input type="text" value="Luxembourg" color="orange" ></ion-input>
+          </ion-item>
+          <div class="validation-errors">
+            <ng-container >
+              <div class="error-message" >
+                <ion-icon name="information-circle-outline"></ion-icon>
+              </div>
+            </ng-container>
+          </div>
+
+
+        <ion-item>
+          <ion-label color="light">MMM.DD.YYYY</ion-label>
+          <ion-datetime min="2010-01" max="2030"
+            [dayShortNames]="customDayShortNames"
+            displayFormat="DDD. MMM DD, YYYY"
+            monthShortNames="jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des"></ion-datetime>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container >
+            <div class="error-message" >
+              <ion-icon name="information-circle-outline"></ion-icon>
+            </div>
+          </ng-container>
+        </div>
+        <ion-item>
+          <ion-label position="floating" color="light">Product</ion-label>
+          <ion-input type="text" value="Microwave" color="orange"  ></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container >
+            <div class="error-message">
+              <ion-icon name="information-circle-outline"></ion-icon> 
+            </div>
+          </ng-container>
+        </div>
+        <ion-item>
+          <ion-label position="floating" color="light">Account Number</ion-label>
+          <ion-input type="text" value="P15645645642318" color="orange" ></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container >
+            <div class="error-message" >
+              <ion-icon name="information-circle-outline"></ion-icon>
+            </div>
+          </ng-container>
+        </div>
+          <ion-item>
+            <ion-textarea  color="light" placeholder="Additional Comments..."></ion-textarea>
+          </ion-item>
+        <div class="validation-errors">
+          <ng-container>
+            <div class="error-message">
+              <ion-icon name="information-circle-outline"></ion-icon>
+            </div>
+          </ng-container>
+        </div>
+
+        <!-- These validations are for the form group -->
+        <div class="validation-errors">
+          <ng-container >
+            <div class="error-message" >
+              <ion-icon name="information-circle-outline"></ion-icon>
+            </div>
+          </ng-container>
+        </div>
+      
+          <ion-button shape="round" color="orange" expand="full" type="submit" >EDIT</ion-button>
+        </form>
+      </div> 
+
+
+
+      
+    </div>
+  </div>
+</ion-content>

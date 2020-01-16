@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="blue">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+        <ion-text color="light">
+          <ion-text color="light" class="fw700">HBS SURVEY</ion-text>
+        </ion-text>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button size="small" shape="round" color="medium" (click)="notifications()">
+        <ion-icon color="orange" name="notifications"></ion-icon>
+        <ion-badge color="blue" slot="end">2</ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content color="blue">
+   <!-- Logo -->
+   <div padding-horizontal text-center class="animated fadeInDown">
+    <div class="logo"></div>
+    <h4 no-margin></h4>
+  </div>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card text-center padding color="orange" (click)="respondant()">
+          <ion-icon  size="large" name="home"></ion-icon>
+          <h4>RESPONDANT PORTAL</h4>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding color="orange" (click)="interviewers()"> 
+          <ion-icon size="large" name="pizza"></ion-icon>
+          <h4>INTERVIEWERS</h4>
+        </ion-card>
+      </ion-col>
+    </ion-row>  
+  </ion-grid>
+
+
+
+  <!-- <ion-button margin shape="round" expand="full" color="secondary" (click)="searchFilter()">
+    Modal 2: Search Filter
+  </ion-button>  -->
+ 
+  <popmenu></popmenu>
+</ion-content>
+  

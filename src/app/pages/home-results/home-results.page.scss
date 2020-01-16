@@ -1,0 +1,25 @@
+:host {
+    ion-content {
+        --background: var(--ion-color-light);
+        text-align: center;
+    }
+
+    ion-item {
+        border-radius: 0;
+        border-bottom: 1px dotted var(--ion-color-medium);
+    }
+
+    ion-card {
+        &.no-radius {
+            border-radius: 0;
+        }
+    }
+    .logo {
+        width: 100px;
+        height: 115px;
+        margin: 60px auto 8px;
+        border-radius: 10%;
+        background: url("/assets/img/ionic4start-ico.png") no-repeat;
+        background-size: 100%;
+      }
+}

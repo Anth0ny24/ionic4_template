@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="blue">
+    <ion-buttons slot="start">
+      <ion-button  shape="round" (click)="closeModal()" color="orange">
+        <ion-icon size="small" class="test" slot="start" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      TRANSACTION
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="blue">
+  <div class="ion-padding">
+    <ion-item>
+      <ion-label><ion-icon name="calendar" size="small" color="light"></ion-icon></ion-label>
+      <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card text-center padding color="orange" (click)="Addtransaction()">
+          <ion-icon name="home"></ion-icon>
+          <h4>Home/Rent</h4>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding color="orange" (click)="Addtransaction()"> 
+<!-- <ion-card text-center padding color="orange" (click)="foodGroceries()">  -->
+          <ion-icon name="pizza"></ion-icon>
+          <h4>Food</h4>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card text-center padding color="orange" (click)="Addtransaction()">
+<!-- <ion-card text-center padding color="orange" (click)="utilities()"> -->
+          <ion-icon name="hammer"></ion-icon>
+          <h4>Utilities</h4>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding color="orange" (click)="Addtransaction()">
+<!-- <ion-card text-center padding color="orange" (click)="insurance()"> -->
+          <ion-icon name="medkit"></ion-icon>
+          <h4>Insurance</h4>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card text-center padding color="orange" (click)="Addtransaction()">
+<!-- <ion-card text-center padding color="orange" (click)="entertainment()"> -->
+            <ion-icon name="logo-game-controller-b"></ion-icon>
+          <h5>Entertainment</h5>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>
+
+
+
+  

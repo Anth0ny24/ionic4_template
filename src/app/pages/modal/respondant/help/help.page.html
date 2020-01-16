@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="blue">
+    <ion-buttons slot="start">
+      <ion-button size="small" shape="round" (click)="closeModal()" color="orange">
+        <ion-icon class="test" slot="start" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      HELP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="blue">
+  <div class="ion-padding">
+    <!-- Icon start -->
+    <ion-segment color="orange" scrollable [(ngModel)]="category">
+      <ion-segment-button checked layout="icon-start" value="video">
+        <ion-label color="light">VIDEO</ion-label>
+        <ion-icon name="videocam"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button layout="icon-start" value="help">
+        <ion-label color="light">SEARCH HELP</ion-label>
+        <ion-icon name="search"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="ion-padding">
+    <div [ngSwitch]="category">
+      <div *ngSwitchCase="'video'">
+        <video controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline">
+          <source [src]="exemple.video" />
+        </video>
+      </div> 
+      <div *ngSwitchCase="'help'">
+    <!-- Textarea in an item with a floating label -->
+        <ion-item>
+          <ion-label position="floating" color="light">HELP</ion-label>
+          <ion-textarea></ion-textarea>
+        </ion-item>
+      </div> 
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer >
+  <ion-toolbar color="blue">
+    <ion-title color="light">HBS Survey</ion-title>
+  </ion-toolbar>
+</ion-footer>
+

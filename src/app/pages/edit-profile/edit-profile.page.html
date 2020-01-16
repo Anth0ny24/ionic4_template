@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar color="blue">
+    <ion-buttons slot="start">
+      <ion-back-button color="orange"></ion-back-button>
+    </ion-buttons>
+    <ion-title>EDIT PROFILE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile" color="blue">
+
+  <ion-card no-margin>
+    <ion-card-content color="blue" >
+      <img src="assets/img/user_icon.png">
+        <h1 class="fw500">John Doe</h1>
+        <h2 color="light" margin-bottom>Main Householder</h2>
+      <ion-button icon-left color="orange">
+        <ion-icon name="photos"></ion-icon> 
+        Edit Avatar
+      </ion-button>
+    </ion-card-content>
+
+    <ion-grid fixed no-padding>
+      <ion-row>
+        <ion-col size="12" padding>
+          <ion-list margin-bottom>
+
+            <ion-item>
+              <ion-label>Gender</ion-label>
+              <ion-select multiple="false" cancelText="Back" okText="Done">
+                <ion-select-option value="bacon">Male</ion-select-option>
+                <ion-select-option value="olives">Female</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Date of Birth</ion-label>
+              <ion-datetime
+                [dayShortNames]="customDayShortNames"
+                displayFormat="DDD. MMM DD, YYYY"
+                monthShortNames="jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Marital Status</ion-label>
+              <ion-select multiple="false" cancelText="Back" okText="Done">
+                <ion-select-option value="bacon">Single</ion-select-option>
+                <ion-select-option value="olives">Couple</ion-select-option>
+                <ion-select-option value="bacon">Married</ion-select-option>
+                <ion-select-option value="olives">Civil Union</ion-select-option>                
+              </ion-select>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="dark" position="stacked">Tenure Status</ion-label>
+              <ion-input inputmode="text" placeholder="" value="Intemporal Contract"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="dark" position="stacked">Main Activity:</ion-label>
+              <ion-input inputmode="text" placeholder="Activity" value="IT Consultant"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="dark">Country of Birth</ion-label>
+              <ion-select>
+                <ion-select-option value="nes">Luxembourg</ion-select-option>
+                <ion-select-option value="n64">France</ion-select-option>
+                <ion-select-option value="ps">Netherland</ion-select-option>
+                <ion-select-option value="genesis">Belgium</ion-select-option>
+                <ion-select-option value="saturn">Italy</ion-select-option>
+                <ion-select-option value="snes">Spain</ion-select-option>
+                <ion-select-option value="snes">Greece</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-button shape="round" color="orange" expand="full" type="submit" (click)="sendData()">EDIT</ion-button>
+
+</ion-content>

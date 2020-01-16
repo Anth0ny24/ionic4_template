@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="blue">
+    <ion-buttons slot="start">
+      <ion-button size="small" shape="round" (click)="closeModal()" color="orange">
+        <ion-icon class="closeCross" slot="start" name="close"></ion-icon> Close
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="blue">
+  <section text-center margin-bottom>
+    <ion-icon name="person"></ion-icon>
+    <h1 style="font-size:1.4em; color:#ff5e00" no-margin>Welcome, <br>
+      Mr. John Doe</h1>
+  </section>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card text-center padding color="orange" (click)="barcode()">
+          <ion-icon name="barcode"></ion-icon>
+          <h4>Scan</h4>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding color="orange" (click)="transaction()">
+          <ion-icon name="card"></ion-icon>
+          <h4>Transaction</h4>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card text-center padding color="orange" (click)="report()">
+          <ion-icon name="clipboard"></ion-icon>
+          <h4>Report</h4>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding color="orange" (click)="help()">
+          <ion-icon name="help-circle"></ion-icon>
+          <h4>Help</h4>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
